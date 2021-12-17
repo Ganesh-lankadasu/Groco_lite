@@ -1,0 +1,157 @@
+
+/*Heading starts*/
+
+.our-blog{
+    height:20vh;
+
+}
+
+.our-blog .blog-heading{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    gap: 45rem;
+
+}
+
+.our-blog .blog-heading h4{
+    font-size: 17px;
+}
+
+.our-blog .blog-heading h4 span{
+    padding-left: 4px;
+    color: var(--green);
+}
+
+.our-blog .blog-heading p{
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.our-blog .blog-heading p:hover{
+    color: var(--green);
+}
+
+
+hr{
+    width: 80%;               
+    background-color: var(--light-color) !important;
+    height: 2px;
+    margin-left: 128px;
+}
+
+@media(max-width:550px){
+    .our-blog .blog-heading{
+        gap: 4rem;
+    
+    }
+    .our-blog .blog-heading h4{
+        font-size: 16px;
+    }
+    hr{
+        margin-left: 43px !important;
+    }
+
+}
+
+/*Heading ends*/
+
+/*Blog starts*/
+
+.blog{
+    width:80%;
+    margin:40px auto;
+}
+
+.blog .blog-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.blog .blog-container .box-blog{
+    flex: 1 1 31rem;
+    border: 1px solid var(--black);
+}
+
+.blog .blog-container .box-blog .image{
+    overflow:hidden;
+}
+
+.blog .blog-container .box-blog img{
+    width:100%;
+    height: 225px;
+    transition: .3s linear;
+}
+
+.blog .blog-container .box-blog img:hover{
+    transform:scale(1.2)
+}
+
+.blog .blog-container .box-blog .content{
+    padding: 29px 7px;
+}
+
+.blog .blog-container .box-blog .content .icons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog .blog-container .box-blog .content hr{
+    width: 100%;
+    margin-left: 2px;
+}
+
+.blog .blog-container .box-blog .content h4{
+    font-size: 17px;
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+
+.blog .blog-container .box-blog .content p{
+    font-size: 11px;
+    padding: 10px 0px;
+}
+
+.blog .blog-container .box-blog .content a{
+    font-size: 13px;
+    border: 2px solid yellowgreen;
+    color: yellowgreen;
+    position: relative;
+    padding: 7px 9px;
+    cursor: pointer;
+    z-index:1
+}
+
+.blog .blog-container .box-blog .content a::before{
+    content:'';
+    position: absolute;
+    top: 0;right:0;
+    width:0%;
+    height: 100%;
+    transition:.3s linear;
+    background: var(--green);
+    z-index:-1;
+    
+}
+
+.blog .blog-container .box-blog .content a:hover::before{
+    left: 0;
+    width:100%;
+}
+
+.blog .blog-container .box-blog .content a:hover{
+    color: var(--white);
+}
+
+@media(max-width:550px){
+    .blog .blog-container .box-blog .content hr{
+        margin-left: 2px !important;
+    }
+}
+
+/*Blog ends*/

@@ -1,0 +1,44 @@
+<section class="main">
+    <div class="form">
+        <form [formGroup]="formdata">
+            <div class="form-group">
+                <label>Enter name</label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label>Enter product</label>
+                <input type="text" class="form-control" formControlName="product">
+            </div>
+            <div class="form-group">
+                <label>Enter weight</label>
+                <input type="text" class="form-control" formControlName="weight">
+            </div>
+            <div class="form-group">
+                <label>Enter price</label>
+                <input type="text" class="form-control" formControlName="price">
+            </div>
+            <div class="form-group">
+                <input type="file" (change)="imagepicked($event)">
+            </div>
+            <input type="button" (click)="Senddata()" class="btn btn-success" value="Submit">
+        </form>
+    </div>
+</section>
+
+<section class="posts">
+    <div class="post-headings">
+        <h4>Name</h4>
+        <h4>Product Name</h4>
+        <h4>Weight</h4>
+        <h4>Price</h4>
+        <h4>Image</h4>
+    </div>
+    <div class="content" *ngFor="let post of posts">
+        <p>{{post.name}}</p>
+        <p>{{post.product}}</p>
+        <p>{{post.weight}}</p>
+        <p>{{post.price}}</p>
+        <img [src]="post.imagepath" style="width:120px;height:80px">
+        <i (click)="deletepost(post._id)"class="fas fa-trash-alt"></i>
+    </div>
+</section>

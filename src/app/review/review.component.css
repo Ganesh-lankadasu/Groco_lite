@@ -1,0 +1,98 @@
+/*Services starts*/
+
+.services{
+    width: 80%;
+    margin: 110px auto;
+}
+
+.services .container .row{
+    text-align: center;
+}
+
+.services .container .row img{
+    width:40%;
+}
+
+
+.services .container .row .col-md-4{
+    display: flex;
+    align-items: center;
+}
+
+.services .container .row .content{
+    margin-left: 22px;
+}
+
+.services .container .row .content h4{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.services .container .row .content p{
+    font-size: 11px;
+
+}
+
+@media(max-width:550px){
+    .services .container .row{
+        gap:4rem;
+    }
+}
+
+/*Services ends*/
+
+/*Review starts*/
+
+.review{
+    width:80%;
+    margin:60px auto
+}
+
+.review .review-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+
+.review .review-container .box-review{
+    flex:1 1 31rem;
+    border: 2px solid var(--light-bg);
+    padding: 31px;
+}
+
+.review .review-container .box-review .image-heading{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.review .review-container .box-review .image-heading img{
+    width: 33%;
+    border-radius: 50%;
+}
+
+
+.review .review-container .box-review .image-heading .heading h4{
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.review .review-container .box-review .image-heading .heading p{
+    font-size: 12px;
+    color: var(--green);
+
+}
+
+.review .review-container .box-review .content{
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+/*Review ends*/
+
+
+
+

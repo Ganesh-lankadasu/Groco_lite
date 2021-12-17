@@ -1,0 +1,127 @@
+
+
+/*Cart-details starts*/
+
+.cart-details{
+    width:80%;
+    margin: 100px auto;
+    position: relative;
+}
+
+mat-spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--green) !important;
+
+}
+
+.cart-details .cart-items{
+    width:70%;
+    padding: 31px 0px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cart-details .cart-items .item{
+    flex: 1 1 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cart-details .cart-items .item .image{
+    flex: 1 1 10rem
+}
+.cart-details .cart-items .item img{
+    width: 100%;
+}
+.cart-details .cart-items .item .name-details{
+    flex: 1 1 10rem;
+    padding: 23px 29px;
+}
+.cart-details .cart-items .item .name-details h4{
+    font-size: 24px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.cart-details .cart-items .quantity{
+    flex: 1 1 20rem;
+    padding: 0px 132px;
+}
+.cart-details .cart-items .quantity h4{
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.cart-details .cart-items .quantity input[type="number"]{
+    border: 2px solid var(--black);
+    padding: 9px;
+    width: 141px;
+    height: 62px;
+    margin-bottom: 19px;
+}
+
+.cart-details .totalamount{
+    width:30%;
+}
+
+.cart-details .cart-items .quantity i{
+    display: inline;
+    font-size: 18px;
+    color: var(--green);
+    cursor: pointer;
+}
+.cart-details .cart-items .quantity h4{
+    display: inline-block;
+    padding: 0px 9px;
+    cursor: pointer;
+}
+
+.down{
+    width: 70%;
+    height: 109px;
+    position: relative;
+}
+
+.down a{
+    border: 1px solid gray;
+    padding: 23px 62px;
+    position: absolute;
+    top: 27px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: var(--white);
+    background: var(--green);
+}
+
+.empty-cart{
+    text-align: center;
+}
+
+.empty-cart i{
+    font-size: 166px;
+}
+
+.empty-cart h4{
+    font-size: 28px;
+    font-weight: 500;
+    margin: 45px 0px;
+}
+
+.empty-cart a{
+    border: 1px solid gray;
+    padding: 23px 62px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: var(--white);
+    background: var(--green);
+    cursor: pointer;
+}
+
+/*Cart-details ends*/

@@ -1,0 +1,86 @@
+/*Contact starts*/
+
+.contact{
+    width:80%;
+    margin:110px auto;
+}
+
+.contact .contact-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap:2rem
+}
+
+.contact .contact-container .box-contact{
+    flex:1 1 21rem;
+    border: 2px solid var(--light-bg);
+    padding: 27px 0px;
+    height:20rem;
+}
+
+.contact .contact-container .box-contact i{
+    font-size: 20px;
+    color: white;
+    background: yellowgreen;
+    padding: 11px;
+    border-radius: 50%;
+}
+
+.contact .contact-container .box-contact h4{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 11px;
+}
+/*Contact ends*/
+
+/*Map starts*/
+
+.map{
+    width:80%;
+    margin: 20px auto;
+}
+
+.map .map-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+
+.map .map-container .box-map{
+    flex:1 1 31rem;
+    height: 41rem;
+    border: 2px solid var(--light-bg);
+    padding: 33px;
+}
+
+.map .map-container .box-map h4{
+    font-size: 21px;
+    font-weight: 600;
+    padding-bottom: 19px;
+    margin-left: 5px;
+}
+
+.map .map-container .box-map form input[type="text"]{
+    border: 2px solid var(--black);
+    width: 48%;
+    font-size: 13px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.map .map-container .box-map textarea[type="textarea"]{
+    border: 2px solid var(--black);
+    width: 97%;
+    margin: 2px;
+    font-size: 13px;
+    padding: 5px;
+}
+
+
+
+/*Map ends*/

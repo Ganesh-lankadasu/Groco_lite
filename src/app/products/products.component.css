@@ -1,0 +1,155 @@
+/*Products starts*/
+
+.our-products{
+    height:20vh;
+
+}
+
+.our-products .products-heading{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    gap: 45rem;
+
+}
+
+.our-products .products-heading h4{
+    font-size: 17px;
+}
+
+.our-products .products-heading h4 span{
+    padding-left: 4px;
+    color: var(--green);
+}
+
+.our-products .products-heading p{
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.our-products .products-heading p:hover{
+    color: var(--green);
+}
+
+
+hr{
+    width: 80%;               
+    background-color: var(--light-bg);
+    height: 2px;
+    margin-left: 128px;
+}
+
+.product-list{
+    width: 100%;
+    margin: 94px auto;
+}
+
+.products{
+    width: 70%;
+    float: right;
+}
+
+.product-list .product-list-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+
+.product-list .product-list-container .box-product{
+    text-align: center;
+    position:relative;
+    overflow:hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.product-list .product-list-container .box-product .icons{
+    position: absolute;
+    top:40%;
+    left:31%;
+    transform:translate(-50% -50%);
+    z-index:100;
+}
+
+.product-list .product-list-container .box-product .icons i{
+    font-size: 16px;
+    padding: 6px 6px;
+    background: white;
+    margin-right: 7px;
+    transform:translateY(-600%);
+    transition:0.2s linear;
+    transition-delay: calc(.1s * var(--i))
+}
+
+.product-list .product-list-container .box-product .icons i:hover{
+    background: var(--green);
+    color: var(--white);
+}
+
+.product-list .product-list-container .box-product:hover .icons i{
+    transform:translateY(0%)
+}
+
+.product-list .product-list-container .box-product .content{
+    margin-top: 1rem;
+    padding: 16px 0px;
+}
+
+
+.product-list .product-list-container .box-product .content i{
+    color: var(--green);
+}
+
+.product-list .product-list-container .box-product span{
+    padding:0rem 10px;
+}
+
+@media(max-width:550px){
+
+    .our-products .products-heading{
+        gap: 4rem;
+    
+    }
+    .our-products .products-heading h4{
+        font-size: 16px;
+    }
+    hr{
+        margin-left: 43px !important;
+    }
+
+    .product-list .product-list-container img{
+        width:68%;
+        
+    }
+    .product-list .product-list-container .box-product .icons i{
+        transform:translateY(-800%);
+
+    }
+    .product-list .product-list-container .box-product .icons{
+        position: absolute;
+        top:40%;
+        left:38%;
+        transform:translate(-50% -50%);
+    }
+
+}
+
+/*Products ends*/
+
+/*Pagination starts*/
+
+.pagination{
+    margin-top: 120px;
+    text-align:center;
+    clear: both;
+}
+
+.pagination mat-paginator{
+    width: 399px;
+    margin: 20px auto;
+}
+
+/*Pagination ends*/

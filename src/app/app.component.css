@@ -1,0 +1,357 @@
+
+/*Header section starts*/
+.header{
+    position: relative;
+    top:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:50px 0px;
+    padding: 12px 0px;
+    box-shadow: var(--box-shadow);
+    z-index:1000;   
+}
+
+.header .logo i{
+    color: var(--green);
+    font-size: 25px;
+    margin:6px;
+}
+
+.header .logo a{
+    color: var(--black);
+        font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+
+}
+
+.header .navbar{
+    display:flex;
+    justify-content: space-evenly;
+    gap:2rem;
+}
+.header .navbar a{
+    font-size: 16px;
+    color: var(--black);    
+    font-family: sans-serif;
+}
+
+.header .navbar a:hover{
+    color:var(--green);
+}
+
+.header .icons{
+    display:flex;
+    justify-content: space-evenly;
+    gap:2rem;
+    color: var(--black);
+    font-size:16px;
+    cursor: pointer;
+}
+
+.header .icons div:hover{
+    color:var(--green);
+    transform:rotate(360deg)
+
+}
+
+
+.header .icons .fa-bars{
+    display:none;
+}
+
+@media(max-width:571px){
+    .header .logo i{
+        font-size: 18px;
+    }
+
+    .header .logo a{
+        font-size: 18px;
+}
+
+.header .navbar a{
+    font-size: 13px;
+}
+
+.header .icons{
+    font-size:12px;
+}
+
+}
+
+@media(max-width:550px){
+    .header .navbar{
+        position: absolute;
+        top:50px;
+        left:0;
+        right:0;
+        width:100%;
+        display:block;
+        border-top:1px solid var(--light-bg);
+        background:var(--white);
+        transition:all 0.2s linear;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0)
+    }
+
+    .header .navbar a{
+        display:flex;
+        margin: 14px;
+        padding: 7px;
+        color: #222 !important;
+        background:var(--light-bg);
+    }
+
+    .header .logo i{
+        font-size: 24px;
+    }
+    
+    .header .logo a{
+            font-size: 25px;
+    }
+
+    .header .icons{
+        font-size:15px;
+    }
+
+    .header .icons .fa-bars{
+        display:block;
+    }
+
+    .header .navbar.active{
+       clip-path:polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+
+    
+}
+/*Header section ends*/
+
+/*Icon opens starts*/
+.icon-opens{
+    position: relative;
+}
+.icon-opens .search{
+    position: absolute;
+    right: 24px;
+    margin-top: 4px;
+    top: 19px;
+    padding: 8px;
+    background-color:white;
+    box-shadow: var(--box-shadow);
+    transform: translateY(-160px);
+    z-index:100;
+}
+
+.icon-opens .search i{
+font-size:14px;
+padding-left:16px !important;
+font-size: 14px;
+padding-right: 9px;
+}
+
+.icon-opens .search input[type=text]{
+    padding-left:6px
+
+}
+.icon-opens .search.active{
+    transform: translateY(0px);
+}
+
+.icon-opens .login{
+    position: absolute;
+    top: 62px;
+    right: 24px;
+    padding: 26px 11px;
+    width: 280px;
+    height: 250px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    z-index:100;
+    transform:translateY(-460%);
+    transition: .3s linear;
+}
+
+.icon-opens .login h4{
+    text-align:center;
+    font-size: 14px;
+    padding-bottom: 9px;
+}
+
+.icon-opens .login input[type=text]{
+    width: 100%;
+    padding: 6px 6px 6px 8px;
+    margin:4px;
+    border: 1px solid var(--light-bg);
+}
+
+.icon-opens .login input[type=checkbox]{
+    margin:4px;
+}
+
+.icon-opens .login span{
+    font-size: 11px;
+    font-family: sans-serif;
+    letter-spacing: 0px;
+}
+
+.icon-opens .login a{
+    display: block;
+    margin: 4px;
+    width: 100%;
+    background-color: var(--green);
+    padding: 5px;
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.icon-opens .login p{
+    margin: 4px;
+    display:inline-block;
+    font-size: 12px;
+    padding-top: 6px;
+    
+}
+
+.icon-opens .login p ~ span{
+    color: var(--green);
+}
+
+
+
+.icon-opens .login.active{
+    transform:translateY(0%);
+}
+
+
+
+
+
+
+/*Icon opens ends */
+
+/*Go-up starts*/
+
+.go{
+    position: fixed;
+    top: 420px;
+    right: 28px;
+    z-index: 100;
+    color: var(--green);
+    border: 2px solid var(--black);
+    padding: 3px 11px;
+    font-size: 31px;
+    display: none;
+    cursor: pointer;
+}
+
+.go.active{
+    display: block;
+}
+
+/*Go-up ends*/
+
+/*Footer starts*/
+
+.footer{
+    background: var(--light-bg);
+    clear: both;
+}
+
+.footer .footer-container{
+    display:flex; 
+    padding:60px 102px;
+    /* padding-left: 126px;   */
+    flex-wrap:wrap;
+    gap:2rem;
+
+}
+
+.footer .footer-container .box-footer{
+    flex:1 1 21rem;
+}
+
+.footer .footer-container .box-footer .content{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.footer .footer-container .box-footer .content h4{
+    font-size: 15px;
+    padding-bottom: 19px;
+    letter-spacing: 1px;
+}
+
+.footer .footer-container .box-footer .content a{
+    font-size:14px;
+    padding-bottom: 12px;
+    cursor: pointer;
+}
+
+.footer .footer-container .box-footer .content a:hover{
+    color: var(--green);
+    transform:translateX(4px);
+}
+
+.footer .footer-container .box-footer .content i{
+    font-size:14px;
+    padding-right:8px;
+    color: var(--green);
+
+}
+
+.footer .footer-container .box-footer .content p{
+    font-size: 14px;
+    padding-bottom: 16px;
+}
+
+.footer .footer-container .box-footer .content input[type=text]{
+    display:block;
+    padding: 9px 7px;
+    margin-bottom: 22px;
+
+}
+
+.footer .footer-container .box-footer .content form #footer-btn{
+    display:inline-block;
+    position: relative;;
+    color: var(--white);
+    background: var(--green);
+    padding: 10px 26px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.footer .footer-container .box-footer .content img{
+    width: 70%;
+}
+
+.credit p{
+    font-size: 14px;
+    text-align: center;
+    padding: 21px 0px;
+    background: var(--green);
+    margin-bottom: 0;
+
+}
+
+@media(max-width:550px){
+    .footer .footer-container{ 
+        padding:60px 0px;
+    }
+    .footer .footer-container .box-footer{
+        padding-left: 36px;
+    }
+
+
+}
+/*Footer ends*/
+

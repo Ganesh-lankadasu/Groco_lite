@@ -1,0 +1,101 @@
+<header class="header">
+  <div class="logo">
+      <i class="fas fa-shopping-basket"></i><a routerLink="home">Groco</a>
+  </div>
+  
+
+  <nav class="navbar">
+    <a id="home" routerLink="/home">Home</a>
+    <a id="shop" routerLink="/shop">Shop</a>
+    <a id="about" routerLink="/about">About</a>
+    <a routerLink="review">Review</a>
+    <a  routerLink="blog">Blog</a>
+    <a routerLink="contact">Contact</a>
+    <a routerLink="server">Server</a>
+
+  </nav>
+
+  <div class="icons">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <div id="search-btn" class="fas fa-search"></div>
+    <div id="cart-btn" class="fas fa-shopping-cart" (click)="cart()"></div>
+    <div id="login-btn" class="fas fa-user"></div>
+    <div class="dark-mode" class="fas fa-adjust"></div>
+  </div>
+
+</header>
+
+<section class="icon-opens">
+  <div class="search">
+    <input type="text" placeholder="Search here">
+    <i class="fas fa-search"></i>
+  </div>
+  <div class="login">
+    <h4>LOGIN NOW</h4>
+    <input type="text" placeholder="enter your email">
+    <input type="text" placeholder="enter your password">
+    <input type="checkbox"><span>Remember Me</span>
+    <a>Login Now</a>
+    <p>Forget Password?</p> <span>Click Here</span>
+    <p>Don't Have An Account?</p> <span>Create One</span>
+  </div>
+</section>
+
+<router-outlet></router-outlet>
+
+<section class="go-up">
+    <i class="go fas fa-angle-up" (click)="goup()"></i>
+</section>
+
+<section class="footer">
+  <div class="footer-container">
+    <div class="box-footer">
+      <div class="content">
+      <h4 style="color:#222">Quick Links</h4>
+      <a><i class="fas fa-arrow-right"> </i>Home</a>
+      <a><i class="fas fa-arrow-right"> </i>Shop</a>
+      <a><i class="fas fa-arrow-right"> </i>About</a>
+      <a><i class="fas fa-arrow-right"> </i>Review</a>
+      <a><i class="fas fa-arrow-right"> </i>Blog</a>
+      <a><i class="fas fa-arrow-right"> </i>Contact</a>
+    </div>
+  </div>
+    <div class="box-footer">
+        <div class="content">
+      <h4 style="color:#222">Extra Links</h4>
+      <a><i class="fas fa-arrow-right"> </i>My Account</a>
+      <a><i class="fas fa-arrow-right"> </i>My Order</a>
+      <a><i class="fas fa-arrow-right"> </i>My Wishlist</a>
+      <a><i class="fas fa-arrow-right"> </i>My Favorite</a>
+      <a><i class="fas fa-arrow-right"> </i>Terms Of Use</a>
+        </div>
+    </div>
+    <div class="box-footer">
+        <div class="content">
+      <h4 style="color:#222">Follow Us</h4>
+      <a><i class="fab fa-facebook-f"></i>Facebook</a>
+      <a><i class="fab fa-twitter"></i>Twitter</a>
+      <a><i class="fab fa-linkedin"></i>Linkdin</a>
+      <a><i class="fab fa-instagram"></i>Instagram</a>
+      <a><i class="fab fa-pinterest"></i>Pinterest</a>
+    </div>
+    </div>
+    <div class="box-footer">
+        <div class="content">
+      <h4 style="color:#222">News Letter</h4>
+      <p style="color:#222">Subscribe For Latest Updates</p>
+      <form>
+        <input type="text" placeholder="enter your email">
+        <a id="footer-btn">Submit</a>
+      </form>
+      <img src="/assets/payment.png" alt="cards">
+    </div>
+    </div>
+    </div>
+</section>
+
+<section class="credit">
+  <p>Created By Mr. Web Developer | All Rights Reserved!</p>
+</section>
+
+

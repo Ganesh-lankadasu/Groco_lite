@@ -1,0 +1,40 @@
+/*Head-banner starts*/
+
+.head-banner{
+    background: url(/assets/heading-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 241px;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.head-banner h4{
+    font-size: 31px;
+    font-weight: 600;
+    padding-bottom: 18px;
+}
+
+.head-banner .homegroup{
+    color: var(--black);
+    display: inline;
+    margin: 0px 7px;
+    font-size: 16px;
+    font-weight: 550;
+    cursor: pointer;
+    align-items: baseline;
+    justify-content: center;
+    gap: 6px;
+    display: inline-flex;
+}
+
+@media(max-width:550px){
+    .head-banner{
+        height: 400px;
+        text-align: center;
+        padding-top: 160px;
+    }
+
+}
+
+/*Head-banner ends*/

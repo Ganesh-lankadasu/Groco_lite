@@ -1,0 +1,38 @@
+<app-head-banner [name]="name"></app-head-banner>
+
+<section class="product-list">
+<div class="catagories">
+
+</div>
+
+<div class="products">
+        <ngx-skeleton-loader count="20" appearance="line" *ngIf="isloading"></ngx-skeleton-loader>
+        <div class="product-list-container">
+            <div *ngFor="let product of items">
+                <div data-aos="zoom-in" class="box-product">
+                    <div class="icons">
+                            <i style="--i:1" class="fas fa-shopping-cart" (click)="addtocart(product)"></i>
+                            <i style="--i:2" class="fas fa-heart"></i>
+                            <i style="--i:3" class="fas fa-eye"></i>
+                    </div>
+                    <img [src]="product.imagepath" style="width:250px;height:171px">
+                    <div class="content">
+                    <h4>{{product.name}}</h4>
+                    <span>{{product.weight}}</span>
+                    <span>{{product.price}}</span>
+    
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+</section>
+
+<section class="pagination">
+        <mat-paginator [length]="totalproducts"
+        [pageSize]="productsperpage"
+        aria-label="Select page" (page)="pagechanged($event)">
+</mat-paginator>
+<h4>Yappy</h4>
+</section>

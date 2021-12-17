@@ -1,0 +1,52 @@
+
+
+
+.main{
+    max-width:80%;
+    margin:110px auto;
+}
+
+.main .form .form-group{
+    padding:5px 0px;
+}
+
+.posts{
+    width:80%;
+    margin:40px auto;
+    border: 2px solid gray;
+    padding: 26px;
+}
+
+.posts .post-headings{
+    display:flex;
+    gap:17rem;
+    padding: 11px 0px;
+    border-bottom: 2px solid gray;
+}
+
+.posts .post-headings h4{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.posts .content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 14rem;
+    border-bottom: 2px solid gray;
+    padding:8px 0px;
+
+}
+
+.posts .content p{
+    font-size:12px;
+    width: 100%;
+
+}
+
+.posts .content i{
+    font-size: 17px;
+    color: yellowgreen;
+    cursor: pointer;
+}

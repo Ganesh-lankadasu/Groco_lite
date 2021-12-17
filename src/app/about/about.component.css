@@ -1,0 +1,178 @@
+/*Banner starts*/
+
+.banner{
+    width: 88%;
+    margin: 75px auto;
+}
+
+.banner .container .row img{
+    width:100%;
+}
+
+.banner .container .row .content{
+    text-align: justify;
+    padding-top: 108px;
+
+}
+
+.banner .container .row .content p{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: var(--green);
+}
+
+.banner .container .row .content h4{
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.banner .container .row .content .des{
+    font-size: 12px;
+    color: var(--black);
+}
+
+.banner .container .row .content a{
+    font-size: 13px;
+    color: var(--green);
+    padding: 11px 22px;
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+    border: 2px solid var(--green);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.banner .container .row .content a::before{
+    content:'';
+    position: absolute;
+    top: 0;right:0;
+    width:0%;
+    height:100%;
+    transition: .3s linear;
+    background: var(--green);
+    z-index: -1
+}
+
+.banner .container .row .content a:hover::before{
+    left: 0;
+    width:100%;
+
+}
+
+.banner .container .row .content a:hover{
+    color: var(--white);
+}
+
+
+
+/*Banner ends*/
+
+/*Our gallery*/
+
+.our-gallery{
+    height: 14vh;
+
+}
+
+.our-gallery .gallery-heading{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    gap: 45rem;
+
+}
+
+.our-gallery .gallery-heading h4{
+    font-size: 17px;
+}
+
+.our-gallery .gallery-heading h4 span{
+    padding-left: 4px;
+    color: var(--green);
+}
+
+.our-gallery .gallery-heading p{
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.our-gallery .gallery-heading p:hover{
+    color: var(--green);
+}
+
+
+hr{
+    width: 80%;               
+    background-color: var(--light-color) !important;
+    height: 2px;
+    margin-left: 128px;
+}
+
+.gallery{
+    width:88%;
+    margin:65px auto;
+}
+.gallery .container .row img{
+    width:100%;
+}
+
+.gallery .container .row .col-md-4{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 17px;
+}
+
+.gallery .container .row .icons{
+    position: absolute;
+    bottom: -72px;
+    left: 2%;
+    transform: translateY(-50%);
+    color: var(--white);
+    font-size: 15px;
+    background: var(--black);
+    width: 96%;
+    text-align: center;
+    height: 35px;
+    transform:translateY(-100%);
+    opacity:.8
+}
+
+.gallery .container .row .col-md-4:hover .icons{
+    bottom:-36px;
+}
+
+.gallery .container .row .icons i{
+    margin-right: 14px;
+    padding-top: 13px;
+    cursor: pointer;
+
+}
+
+.gallery .container .row .icons i:hover{
+    color: var(--green);
+}
+
+
+
+@media(max-width:550px){
+
+
+    .our-gallery .gallery-heading{
+        gap: 4rem;
+    
+    }
+    .our-gallery .gallery-heading h4{
+        font-size: 16px;
+    }
+
+    
+    hr{
+        margin-left: 43px !important;
+    }
+
+}
+/*Our gallary ends*/

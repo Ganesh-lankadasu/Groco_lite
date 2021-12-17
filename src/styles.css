@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,200;1,300;1,600&display=swap');
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+*{
+    font-family:'Poppins',sans-serif;
+    padding:0;margin:0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none !important;
+    transition: .2s linear;
+}
+
+
+
+.slider{
+    position: relative !important;
+}
+.slider .owl-prev,.slider .owl-next{
+    position: absolute !important;
+    top:50%;
+    background: var(--white) !important;
+    color: var(--black) !important;
+    padding: 8px 9px !important;
+  box-shadow: var(--box-shadow) !important;
+}
+.slider .owl-prev{
+    position: absolute !important;
+    left: 20px;
+}
+.slider .owl-next{
+    position: absolute !important;
+    right:20px;
+}
+
+.slider .owl-dots {
+    position: absolute;
+    bottom: 11%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+
+
+
+
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+    width:100vw;
+}
+
+body{
+    background: var(--white)
+}
+
+.darkmode{
+    --black:#fff;
+    --white:#222;
+
+}
+h4,p{
+    color: var(--black);
+}
+
+:root{
+    --green:#bac34e;
+    --black:#222;
+    --white:#fff;
+    --light-color:#666;
+    --light-bg:#f3f3f3;
+    --border:1rem solid rgba(0,0,0,.1);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1)
+} 
+
+
+
+
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
