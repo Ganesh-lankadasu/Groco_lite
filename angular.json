@@ -33,6 +33,7 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/aos/dist/aos.css",
               "./node_modules/pure-css-loader/dist/css-loader.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": [

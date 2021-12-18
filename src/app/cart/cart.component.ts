@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../common.service';
 import { Router } from '../../../node_modules/@angular/router';
+import { NotificationService } from '../notification.service';
 
 @Component({
   selector: 'app-cart',
@@ -18,7 +19,8 @@ export class CartComponent implements OnInit {
 
 
   constructor(private common: CommonService,
-    private router: Router) { }
+    private router: Router,
+    private notify:NotificationService) { }
 
   ngOnInit(): void {
 
@@ -50,6 +52,7 @@ export class CartComponent implements OnInit {
       itemproducts.splice(itemproducts.findIndex((a:any)=>{
         return a.name === item.name
        }),1)
+       this.notify.showError('Item deleted')
        localStorage.setItem('products',JSON.stringify(itemproducts));
        this.cartitems = JSON.parse(localStorage.getItem('products'));
        this.deleteitem = false;
@@ -65,8 +68,10 @@ export class CartComponent implements OnInit {
       
     }, 1000);
 
+  }
 
-
+  shopping(){
+    this.router.navigate(['/allproducts'])
   }
 
   

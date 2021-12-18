@@ -96,10 +96,10 @@ app.delete("/api/post/:id",(req,res)=>{
 })
 
 app.use("/api/fetch/:product",(req,res)=>{
-     Post.find({product : req.params.product}).then((result)=>{
-         console.log(result);
+     Post.find({product : req.params.product}).then((documents)=>{
+        res.status(200).json(documents);
      })
-    res.status(200).json({message:"Post fetched successfully"});
+
 })
 
 

@@ -22,6 +22,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { CartComponent } from './cart/cart.component';
 import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -56,7 +57,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatBadgeModule,
     MatPaginatorModule,
     NgxSkeletonLoaderModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

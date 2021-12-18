@@ -2,19 +2,49 @@
 
 <section class="product-list">
 <div class="catagories">
+    <div class="catagories-container">
+    <h4>Catagories</h4>
+    <ul>
+        <li class="active" (click)="getproducts()">All Items</li>
+        <li (click)="getitems('fruits')">Fresh Fruits</li>
+        <li (click)="getitems('vegitables')">Vegetables</li>
+        <li (click)="getitems('spices')">Organic spices</li>
+        <li (click)="getitems('meat')">Fresh Meat</li>
+        <li (click)="getitems('dryfruits')">Dry Fruits</li>
+    </ul>
+</div>
 
 </div>
 
-<div class="products">
-        <ngx-skeleton-loader count="20" appearance="line" *ngIf="isloading"></ngx-skeleton-loader>
+<div class="products" *ngIf="isproducts">
+        <mat-spinner *ngIf="isloading"></mat-spinner>
         <div class="product-list-container">
             <div *ngFor="let product of items">
                 <div data-aos="zoom-in" class="box-product">
-                    <div class="icons">
-                            <i style="--i:1" class="fas fa-shopping-cart" (click)="addtocart(product)"></i>
-                            <i style="--i:2" class="fas fa-heart"></i>
-                            <i style="--i:3" class="fas fa-eye"></i>
+                    <img [src]="product.imagepath" style="width:250px;height:171px">
+                    <div class="item-btn">
+                        <a *ngIf="!product.addedToCart" (click)="addtocart(product)">Add to Cart</a>
+                        <a *ngIf="product.addedToCart" class="cart" (click)="gotobag()">Go to Cart</a>
+
+                        <!-- <a *ngIf="showbtn" (click)="addtocart(product)">Add to Cart</a>
+                        <a *ngIf="!showbtn" (click)="gotobag()">Go to Cart</a> -->
                     </div>
+                    <div class="content">
+                    <h4>{{product.name}}</h4>
+                    <span>{{product.weight}}</span>
+                    <span>{{product.price}}</span>
+    
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+<div class="item" *ngIf="isitem">
+        <mat-spinner *ngIf="isloading"></mat-spinner>
+        <div class="item-list-container">
+            <div *ngFor="let product of catagoryitem">
+                <div data-aos="zoom-in" class="box-product">
                     <img [src]="product.imagepath" style="width:250px;height:171px">
                     <div class="content">
                     <h4>{{product.name}}</h4>
@@ -29,10 +59,9 @@
         
 </section>
 
-<section class="pagination">
+<section class="pagination" *ngIf="isproducts">
         <mat-paginator [length]="totalproducts"
         [pageSize]="productsperpage"
         aria-label="Select page" (page)="pagechanged($event)">
 </mat-paginator>
-<h4>Yappy</h4>
 </section>

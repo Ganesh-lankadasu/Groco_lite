@@ -1,7 +1,18 @@
 <app-head-banner [name]="name"></app-head-banner>
 
 
+
 <section class="cart-details">
+
+        <section *ngIf="showcart" class="heading">
+                <h4>Cart</h4>
+            <div class="head">
+            <h4>Products</h4>
+            <a (click)="shopping()"><i class="fas fa-angle-left"></i>Continue shopping</a>
+        </div>
+        </section>
+
+
         <mat-spinner *ngIf="deleteitem"></mat-spinner>
     <ng-container *ngFor="let cartitem of cartitems">
     <div class="cart-items">
@@ -13,6 +24,7 @@
             <div class="name-details">
                 <h4>{{cartitem.name}}</h4>
                 <h4>{{cartitem.price}}</h4>
+                <h4>{{cartitem.weight}}</h4>
             </div>
         </div>
 
@@ -25,17 +37,17 @@
             </div>
         </div>
     </div>
+    <hr>
 </ng-container>
 
 <div *ngIf="showcart" class="down">
-        <hr>
         <a>Update cart</a>
     </div>
 
     <div *ngIf="emptycart" class="empty-cart">
             <i class="far fa-cart-plus"></i>
             <h4>Cart is empty</h4>
-            <a (click)="returntoshop()">Return to shop</a>
+            <a (click)="returntoshop()"><i class="fas fa-angle-left"></i>Return to shop</a>
     </div>
 
     

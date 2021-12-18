@@ -8,8 +8,7 @@ import {BehaviorSubject} from 'rxjs';
 })
 export class CommonService {
 
-  public cart:any[] = [];
-  public products = new BehaviorSubject([])
+
 
   constructor(private http:HttpClient) { }
 
@@ -27,15 +26,7 @@ export class CommonService {
     return this.http.delete<{message:string}>('http://localhost:3000/api/post/' + id)
   }
 
-  addtocart(product){
-    this.cart.push(product);
-    console.log(this.cart);
-    this.products.next(this.cart);
-    console.log(this.products);
-
-  }
-
-  getproducts(){
-    return this.products;
+  getitems(item){
+    return this.http.get('http://localhost:3000/api/fetch/' + item);
   }
 }
